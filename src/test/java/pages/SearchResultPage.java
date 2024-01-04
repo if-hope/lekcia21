@@ -31,7 +31,7 @@ public class SearchResultPage extends AbstractPage{
                 j++;
             }
         }
-        return concatinated.stream().anyMatch(element -> element.contains("test"));
+        return concatinated.stream().allMatch(element -> element.contains("test"));
     }
 
 }

@@ -1,8 +1,12 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+
+import java.time.Duration;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -46,7 +50,7 @@ public class ContactUsPage extends AbstractPage{
 
     public ContactUsPage fillForm(String name, String email, String textArea){
         getUserNameField().shouldBe(Condition.visible).sendKeys(name);
-        //userNameField.shouldBe(Condition.visible).sendKeys(name);
+        //getUserNameField().shouldBe(Condition.visible, Duration.ofSeconds(7)).sendKeys(name);
         getEmailField().shouldBe(Condition.visible).sendKeys(email);
         getMessageTextArea().shouldBe(Condition.visible).sendKeys(textArea);
         return this;

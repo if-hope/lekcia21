@@ -10,6 +10,7 @@ public class AbstractTest {
     @BeforeMethod
     public void setUp() {
         Configuration.browser = "chrome";
+        //Configuration.timeout = 10000;
         //Configuration.browserSize = "1920x1080";
         //WebDriverRunner.getWebDriver().manage().window().maximize();
     }

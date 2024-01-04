@@ -38,3 +38,5 @@ build/
 .DS_Store
 /src/main/
 /.idea/
+/my_test.log
+/test-output/
